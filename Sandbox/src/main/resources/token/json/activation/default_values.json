@@ -1,0 +1,8 @@
+{
+  "address": {"country": "US"},
+  "aud": [ "activation.disneyplus.com" ],
+  "products": [ "com.disney.product.id" ],
+  "provider": "SAMPLE_PROVIDER_US",
+  "iss": "qa.samplepartnersite.com",
+  "sub": "sample-subject-id-001"
+}

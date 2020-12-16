@@ -1,0 +1,13 @@
+
+version "0.1"
+group "dplus.examples.mn"
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+configurations {
+    // for dependencies that are needed for development only
+    developmentOnly
+}

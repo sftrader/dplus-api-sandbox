@@ -1,0 +1,9 @@
+{
+  "aud": [
+    "get.entitlement.disneyplus.com"
+    ],
+  "iat": 1600958996,
+  "exp": 1800111222,
+  "provider": "SAMPLE_PROVIDER_US",
+  "iss": "qa.disneyplus.com"
+}
