@@ -27,6 +27,7 @@ public class JWKSEndpointReader {
             System.out.println("--------> created URL obj");
             conn = (HttpURLConnection) url.openConnection();
             System.out.println("--------> conn is " + conn);
+            conn.setRequestProperty("User-Agent", "Mozilla/5.0");
             InputStream iStream = conn.getInputStream();
             System.out.println("--------> is is " + iStream);
             BufferedReader in = new BufferedReader(
