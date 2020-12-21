@@ -23,8 +23,10 @@ time spans. VerificationKeys shows how to create a Java key from the JWK represe
 
 #Running
 The easiest way to run is to either clone or copy the Dockerfile in the repo and run that.  Assuming you already have Docker installed, open a terminal window, cd into the directory containing the Dockerfile, and
-- % docker build -t dss-api .
+- % docker build --no-cache -t dss-api .
 - % docker run -p 8484:8080 -it dss-api
+
+For the build command, "--no-cache" is highly recommended to ensure the latest code from this repo is pulled down.
 
 The "-it" flags are important since console access for input and output are required.
 
