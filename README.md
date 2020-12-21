@@ -9,7 +9,7 @@ The third-party runtime code consists of:
 
 All security-related code used for JWT signing is included in the JDK.
 
-#Functionality
+##Functionality
 - An interactive shell which can perform specific tasks illustrating parts of the Disney activation and entitlement
 capabilities.
 - A web endpoint for displaying a JSON Web Key Set (JWKS) and for forcibly rotating keys.  The JWKS endpoint is published at http://localhost:8484/jwks, and an endpoint for forcibly rotating keys is published at http://localhost:8484/jwks/rotate.  Note that the port value of 8484 is configurable (see Running below) and that the protocol is http, not https, for this demo.
