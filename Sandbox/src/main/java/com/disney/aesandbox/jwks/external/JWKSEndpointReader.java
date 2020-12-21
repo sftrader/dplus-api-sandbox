@@ -20,9 +20,9 @@ public class JWKSEndpointReader {
 
         try {
 
+            System.out.println("Using URL " + endpoint);
             URL url = new URL(endpoint);
             conn = (HttpURLConnection) url.openConnection();
-            conn.setRequestMethod("GET");
             conn.connect();
             int status = conn.getResponseCode();
             if (status != 200) {
