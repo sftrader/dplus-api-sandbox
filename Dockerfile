@@ -9,7 +9,6 @@ RUN git clone https://github.com/sftrader/dplus-api-sandbox.git
 RUN echo "#!/bin/bash" > /startscript.sh
 RUN echo "set -x" >> /startscript.sh
 RUN echo "cd dplus-api-sandbox" >> /startscript.sh
-RUN echo "which java" >> /startscript.sh
 RUN echo "./gradlew clean build" >> /startscript.sh
 RUN echo "java -jar Sandbox/build/libs/Sandbox*all.jar" >> /startscript.sh
 

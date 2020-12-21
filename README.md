@@ -26,8 +26,16 @@ The easiest way to run is to either clone or copy the Dockerfile in the repo and
 - % docker build -t dss-api .
 - % docker run -p 8080:8484 -it dss-api
 
+The "-it" flags are important since console access for input and output are required.
+
+Startup takes a while, more than a whole minute on a typical laptop with good connectivity, due to the script in the container causing gradle to download some artifacts.  Be patient.
+
 In this example, dss-api is just a name given to the docker image that will be built locally and run (you can use any name you like).  In the "-p" argument to docker run, 8080 is required (this is the internal port for the docker image), but 8484 can be changed to and valid port value (this is the externally-visible port on the system that will be used).
 
 MacOS user note: some of the tasks ask for a JWT to be input on the command line.  In MacOS the length of the JWT may be longer than the shell accepts -- you will see that not all of the input line can be input or pasted in, and a tone will sound by default.  This can be worked around by inputting/pasting a portion of the line, typing CTRL-D, and then continuing.  There is a good discussion of this in https://unix.stackexchange.com/questions/204815/terminal-does-not-accept-pasted-or-typed-lines-of-more-than-1024-characters -- it is a MacOS/OSX quirk.
 
 One task ("Test key rotation semantics by using input JWKS and token values") asks for a token and JWKS endpoint to be input for validation.  An easy way to see this task in action (if you don't already have the JWT/JWKS infrastructure in place) is to simply run two different Docker images of this environment on different ports, and use the JWKS endpoint from one environment to validate on the other. 
+
+# The Command Shell
+
+After startup, a numbered list of task options should be displayed.  Choose the task to run by number, you will be guided for any input needed.

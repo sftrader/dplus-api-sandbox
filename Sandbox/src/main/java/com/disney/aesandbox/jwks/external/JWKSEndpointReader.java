@@ -23,6 +23,7 @@ public class JWKSEndpointReader {
             URL url = new URL(endpoint);
             conn = (HttpURLConnection) url.openConnection();
             conn.setRequestMethod("GET");
+            conn.connect();
             int status = conn.getResponseCode();
             if (status != 200) {
                 System.err.println("Error return status from HTTP: " + status);
