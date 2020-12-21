@@ -21,17 +21,11 @@ public class JWKSEndpointReader {
 
         try {
 
-            System.out.println("--------> Using URL " + endpoint);
-            System.err.println("--------> Using URL " + endpoint);
             URL url = new URL(endpoint);
-            System.out.println("--------> created URL obj");
             conn = (HttpURLConnection) url.openConnection();
-            System.out.println("--------> conn is " + conn);
             conn.setRequestProperty("User-Agent", "Mozilla/5.0");
             conn.setRequestProperty("Accept", "*/*");
-            System.out.println("--------> props set");
             InputStream iStream = conn.getInputStream();
-            System.out.println("--------> is is " + iStream);
             BufferedReader in = new BufferedReader(
                     new InputStreamReader(conn.getInputStream()));
             String inputLine;

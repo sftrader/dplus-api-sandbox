@@ -36,7 +36,7 @@ In this example, dss-api is just a name given to the docker image that will be b
 
 MacOS user note: some of the tasks ask for a JWT to be input on the command line.  In MacOS the length of the JWT may be longer than the shell accepts -- you will see that not all of the input line can be input or pasted in, and a tone will sound by default.  This can be worked around by inputting/pasting a portion of the line, typing CTRL-D, and then continuing.  There is a good discussion of this in https://unix.stackexchange.com/questions/204815/terminal-does-not-accept-pasted-or-typed-lines-of-more-than-1024-characters -- it is a MacOS/OSX quirk.
 
-One task ("Test key rotation semantics by using input JWKS and token values") asks for a token and JWKS endpoint to be input for validation.  An easy way to see this task in action (if you don't already have the JWT/JWKS infrastructure in place) is to simply run two different Docker images of this environment on different ports, and use the JWKS endpoint from one environment to validate on the other. 
+One task ("Test key rotation semantics by using input JWKS and token values") asks for a token and JWKS endpoint to be input for validation.  An easy way to see this task in action (if you don't already have the JWT/JWKS infrastructure in place) is to simply run two different Docker images of this environment on different ports, and use the JWKS endpoint from one environment to validate on the other.  NOTE: when running from a docker container, it will not work to use "localhost" as a hostname in a URL string.  Instead use the IP address currently assigned to the host machine.
 
 # The Command Shell
 
