@@ -1,4 +1,4 @@
-## Disney Activation and Entitlement Sandbox
+# Disney Activation and Entitlement Sandbox
 
 The Disney Activation and Entitlement Sandbox ("aesandbox") code implements a sandbox environment to illustrate concepts from the Disney Activation and Entitlement API. The
 runtime code is designed to use as little third-party software as possible in order to reduce any licensing conflicts.
@@ -9,7 +9,7 @@ The third-party runtime code consists of:
 
 All security-related code used for JWT signing is included in the JDK.
 
-##Functionality
+## Functionality
 - An interactive shell which can perform specific tasks illustrating parts of the Disney activation and entitlement
 capabilities.
 - A web endpoint for displaying a JSON Web Key Set (JWKS) and for forcibly rotating keys.  The JWKS endpoint is published at http://localhost:8484/jwks, and an endpoint for forcibly rotating keys is published at http://localhost:8484/jwks/rotate.  Note that the port value of 8484 is configurable (see Running below) and that the protocol is http, not https, for this demo.
@@ -21,7 +21,7 @@ Code of particular interest includes:
 and retrieval of keys from disk or a database). TimeBasedKeyRotationPolicy abstracts out the key rotation policy
 time spans. VerificationKeys shows how to create a Java key from the JWK representation.
 
-#Running
+## Running
 The easiest way to run is to either clone or copy the Dockerfile in the repo and run that.  Assuming you already have Docker installed, open a terminal window, cd into the directory containing the Dockerfile, and
 - % docker build --no-cache -t dss-api .
 - % docker run -p 8484:8080 -it dss-api
@@ -38,6 +38,6 @@ MacOS user note: some of the tasks ask for a JWT to be input on the command line
 
 One task ("Test key rotation semantics by using input JWKS and token values") asks for a token and JWKS endpoint to be input for validation.  An easy way to see this task in action (if you don't already have the JWT/JWKS infrastructure in place) is to simply run two different Docker images of this environment on different ports, and use the JWKS endpoint from one environment to validate on the other.  NOTE: when running from a docker container, it will not work to use "localhost" as a hostname in a URL string.  Instead use the IP address currently assigned to the host machine.
 
-# The Command Shell
+## The Command Shell
 
 After startup, a numbered list of task options should be displayed.  Choose the task to run by number, you will be guided for any input needed.
