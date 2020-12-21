@@ -20,10 +20,14 @@ public class JWKSEndpointReader {
 
         try {
 
-            System.out.println("Using URL " + endpoint);
+            System.out.println("--------> Using URL " + endpoint);
+            System.err.println("--------> Using URL " + endpoint);
             URL url = new URL(endpoint);
+            System.out.println("--------> created URL obj");
             conn = (HttpURLConnection) url.openConnection();
+            System.out.println("--------> conn is " + conn);
             conn.connect();
+            System.out.println("--------> connected!");
             int status = conn.getResponseCode();
             if (status != 200) {
                 System.err.println("Error return status from HTTP: " + status);
